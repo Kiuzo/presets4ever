@@ -1,40 +1,156 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+<div align="center">
+  <img src="public/favicon.ico" alt="Banner Presets4Ever" width="20%"/> 
+  
+  # 🎛️ Presets4Ever
+  
+  **Comunidade de Produção Musical**
+  
+  [![Next.js](https://img.shields.io/badge/Next.js-15-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+  [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://www.javascript.com/)
+  [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.4-38bdf8?style=for-the-badge&logo=tailwind-css)](https://tailwindcss.com/)
+  [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+</div>
 
-## Getting Started
+---
 
-First, run the development server:
+## 🧭 Conteúdo
+
+- [Visão Geral](#visão-geral)
+- [Tecnologias](#tecnologias)
+- [Recursos Principais](#recursos-principais)
+- [Instalação](#instalação)
+
+---
+
+## 📖 Visão Geral
+
+**Presets4Ever** é a plataforma definitiva para produtores musicais compartilharem e descobrirem recursos essenciais de produção. Nossa comunidade global se une para trocar **Presets**, **VSTs** e **Drumkits** de forma gratuita, organizada e colaborativa.
+
+## 🛠️ Tecnologias
+
+<div align="center">
+
+|                                         **Framework Principal**                                          |                                            **Estilização e UI**                                            |                                        **Backend e Dados**                                         |
+| :------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------: |
+|            ![Next.js](https://img.shields.io/badge/Next.js_15-black?style=flat&logo=next.js)             | ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38bdf8?style=flat&logo=tailwind-css&logoColor=white) | ![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=flat&logo=supabase&logoColor=white) |
+| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black) |                                                                                                            |            ![Vercel](https://img.shields.io/badge/Vercel-black?style=flat&logo=vercel)             |
+|       ![React](https://img.shields.io/badge/React_19-61DAFB?style=flat&logo=react&logoColor=black)       |                                                                                                            |                                                                                                    |
+
+</div>
+
+---
+
+## 🎼 Recursos Principais
+
+### 🔍 Descoberta e Busca
+
+<table>
+  <tr>
+    <th width="30%">Recurso</th>
+    <th width="70%">Descrição</th>
+  </tr>
+  <tr>
+    <td><strong>🔥 Tendências</strong></td>
+    <td>Descubra os presets, VSTs e drumkits mais baixados e melhor avaliados pela comunidade</td>
+  </tr>
+  <tr>
+    <td><strong>🔍 Busca Avançada</strong></td>
+    <td>Busca inteligente por DAW (Ableton, FL Studio, Logic), plugin (Serum, Vital, Omnisphere), gênero e BPM</td>
+  </tr>
+  <tr>
+    <td><strong>🏷️ Tags Inteligentes</strong></td>
+    <td>Organização por categorias: Trap, EDM, Lo-Fi, House, Techno, Boom Bap, Drill e mais</td>
+  </tr>
+  
+  <tr>
+    <td><strong>🎛️ Filtro por Tipo</strong></td>
+    <td>Filtre por Presets (synth, FX), VSTs (instrumentos, efeitos) ou Drumkits (808s, caixas, hi-hats)</td>
+  </tr>
+</table>
+
+---
+
+## 💻 Instalação
+
+### 📋 Requisitos do Sistema
+
+| Componente                 | Requisito Mínimo        |
+| -------------------------- | ----------------------- |
+| **Node.js**                | Versão 18.0 ou superior |
+| **Gerenciador de Pacotes** | NPM                     |
+| **Banco de Dados**         | Supabase                |
+| **SO**                     | Windows, macOS ou Linux |
+
+### 🚀 Guia de Início Rápido
+
+#### 1️⃣ Clone o repositório
+
+```bash
+git clone https://github.com/kiuzo/presets4ever.git
+cd presets4ever
+```
+
+#### 2️⃣ Instale as dependências
+
+```bash
+npm install
+
+```
+
+#### 3️⃣ Configure as Variáveis de Ambiente
+
+Crie um arquivo `.env.local` no diretório raiz:
+
+```env
+# Configuração do Supabase
+NEXT_PUBLIC_SUPABASE_URL=sua_url_do_projeto.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=sua_chave_anon_aqui
+```
+
+#### 4️⃣ Inicie o Servidor de Desenvolvimento
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+🎉 Acesse a aplicação em: **http://localhost:3000**
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### 📦 Build para Produção
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+npm run build
+npm run dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<div align="center">
 
-## Learn More
+## 👨‍💻 Criado Por
 
-To learn more about Next.js, take a look at the following resources:
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/kiuzo">
+        <img src="https://github.com/kiuzo.png" width="120px;" alt="Kiuzo"/>
+        <br />
+        <sub><b>Kiuzo</b></sub>
+      </a>
+      <br />
+      <sub>Desenvolvedor Full Stack</sub>
+      <br />
+      <a href="https://www.linkedin.com/in/david-soares-lopes/">💼 LinkedIn</a>
+    </td>
+  </tr>
+</table>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**© 2025 Projeto Presets4Ever**
 
-## Deploy on Vercel
+Feito com ❤️ por produtores, para produtores
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+[![Portfolio](https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://kiuzo.vercel.app)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/kiuzo)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+</div>
