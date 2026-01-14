@@ -1,4 +1,4 @@
-export default function Card({ name, description, image }) {
+export default function Card({ name, description, image, download }) {
   return (
     <article className="flex flex-col items-center bg-gray-400 rounded-md p-4 max-w-md">
       
@@ -11,7 +11,14 @@ export default function Card({ name, description, image }) {
         <div className="flex flex-col gap-2">
           <h1 className="text-lg font-bold">{name}</h1>
           <p className="text-sm text-gray-100">{description}</p>
-          <button className="bg-black/60 rounded-md text-white w-fit px-2 py-1">Download</button>
+          <a 
+            href={download} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="bg-black/60 rounded-md text-white w-fit px-2 py-1 hover:bg-black/80 transition-colors"
+          >
+            Download
+          </a>
         </div>
       </div>
 
