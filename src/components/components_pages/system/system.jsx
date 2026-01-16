@@ -6,19 +6,21 @@ import { supabase } from "@/lib/supabaseClient";
 export default function System() {
   const [cards, setCards] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [selectedTable, setSelectedTable] = useState("vsts");
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function fetchCards() {
-      console.log("Iniciando busca de cards...");
+      setLoading(true);
+      console.log(`Iniciando busca de cards na tabela ${selectedTable}...`);
       try {
-        const { data, error } = await supabase.from("vsts").select("*");
+        const { data, error } = await supabase.from(selectedTable).select("*");
 
         if (error) {
           console.error("Erro do Supabase:", error.message);
           console.error("Detalhes do erro:", error);
         } else {
-          console.log("Dados recebidos do Supabase:", data);
+          console.log(`Dados recebidos da tabela ${selectedTable}:`, data);
           setCards(data || []);
         }
       } catch (err) {
@@ -29,7 +31,7 @@ export default function System() {
     }
 
     fetchCards();
-  }, []);
+  }, [selectedTable]);
 
   const filteredCards = cards.filter(
     (card) =>
@@ -39,7 +41,30 @@ export default function System() {
   );
 
   return (
-    <main className="flex flex-col gap-8 items-center justify-center bg-gray-200 p-8">
+    <main className="flex flex-col gap-8 items-center justify-center bg-gray-200 p-8 min-h-screen">
+      {/* Filtros de Tabela */}
+      <section className="flex flex-wrap justify-center gap-4 w-full max-w-4xl">
+        {[
+          { id: "vsts", label: "VSTs & Plugins" },
+          { id: "drumkit", label: "Drumkits"},
+          { id: "presets", label: "Presets"},
+        ].map((table) => (
+          <button
+            key={table.id}
+            onClick={() => setSelectedTable(table.id)}
+            className={`flex items-center gap-2 px-6 py-3 rounded-full font-bold transition-all duration-300 shadow-sm
+              ${
+                selectedTable === table.id
+                  ? "bg-indigo-600 text-white shadow-lg scale-105"
+                  : "bg-white text-gray-700 hover:bg-gray-100"
+              }`}
+          >
+            
+            {table.label}
+          </button>
+        ))}
+      </section>
+
       {/* searchbar */}
       <section className="flex justify-center w-full">
         <SearchBar searchTerm={searchTerm} onSearchChange={setSearchTerm} />
