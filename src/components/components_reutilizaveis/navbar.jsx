@@ -40,6 +40,9 @@ export default function Navbar() {
           <>
             <li className="text-sm font-semibold text-gray-700">Olá, {user.user_metadata?.name || user.email}</li>
             <li>
+              <a href="/profile" className="text-sm text-orange-500 font-semibold">Profile</a>
+            </li>
+            <li>
               <button
                 onClick={handleLogout}
                 className="text-sm border border-red-500 px-2 py-1 rounded-md text-red-500 font-semibold"
